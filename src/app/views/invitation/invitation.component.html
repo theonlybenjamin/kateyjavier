@@ -1,0 +1,74 @@
+<div class="layout" *ngIf="guest">
+    <section class="title">
+        <b>{{guest.nombre}}</b><br><br>
+        Queremos compartir con ustedes la alegr&iacute;a <br> de unir nuestras vidas ante Dios.
+    </section>
+    <section>
+        <img src="assets/title.png" class="hero" alt="">
+    </section>
+    <section class="vestimenta">
+        <h3>Vestimenta: Formal</h3>
+        <img src="assets/vestimenta.png" class="hero" alt="">
+    </section>
+    <section class="pases-container">
+        <h3>Pases</h3>
+        <p>
+            Hemos reservado:
+        </p>
+        <div class="pases">
+            <div class="circle">
+                <span class="dot" [ngClass]="{'active': guest.pases === 1}"></span>
+                <span>1</span>
+            </div>
+            <div class="circle">
+                <span class="dot" [ngClass]="{'active': guest.pases === 2}"></span>
+                <span>2</span>
+            </div>
+            <div class="circle">
+                <span class="dot" [ngClass]="{'active': guest.pases === 3}"></span>
+                <span>3</span>
+            </div>
+            <div class="circle">
+                <span class="dot" [ngClass]="{'active': guest.pases === 4}"></span>
+                <span>4</span>
+            </div>
+            <div class="circle">
+                <span class="dot" [ngClass]="{'active': guest.pases === 5}"></span>
+                <span>5</span>
+            </div>
+        </div>
+        <span>Lugares en su honor</span>
+    </section>
+    <section class="address-container">
+        <h3>Ubicaci&oacute;n</h3>
+        <p>
+            Calle 6 Mz. 18 Lt. 10 <br>
+            Distrito de Santa Rosa
+        </p>
+        <br>
+        <div class="wrapper">
+            <button class="icon facebook">
+                <a href="https://goo.gl/maps/7oCugqmPj1m7i8bD9" target="_blank">
+                    <span class="tooltip">Ir a maps</span>
+                    <span>
+                        <img src="assets/gmaps.png" class="gmaps">
+                    </span>
+                </a>
+            </button>
+            <button class="icon facebook">
+                <a href="https://waze.com/ul/h6mchggs68" target="_blank">
+                    <span class="tooltip">Ir a Waze</span>
+                    <span>
+                        <img src="assets/waze.png" class="waze">
+                    </span>
+                </a>
+            </button>
+        </div>
+
+    </section>
+    <button class="custom-btn btn-3">
+        <a href="http://wa.me/51991222906" target="_blank">
+            <span>CONFIRMAR ASISTENCIA</span>
+        </a>
+    </button>
+</div>
