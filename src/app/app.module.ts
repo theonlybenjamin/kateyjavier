@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { InvitationComponent } from './views/invitation/invitation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotWelcomeComponent } from './views/not-welcome/not-welcome.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,11 @@ import { NotWelcomeComponent } from './views/not-welcome/not-welcome.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy, useClass: PathLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
